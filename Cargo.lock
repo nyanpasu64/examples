@@ -801,8 +801,7 @@ dependencies = [
 [[package]]
 name = "nativeshell"
 version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "454ff25aadc38b6a563bb0b252f973bc53a1e263db9dae6968132c4363c57edd"
+source = "git+https://github.com/nativeshell/nativeshell.git?branch=main#8bfab24602be2eb1bf55a094a8bd15954fa90d8f"
 dependencies = [
  "block",
  "byte-slice-cast",
@@ -828,7 +827,7 @@ dependencies = [
  "lazy_static",
  "libc",
  "log",
- "nativeshell_build",
+ "nativeshell_build 0.1.4 (git+https://github.com/nativeshell/nativeshell.git?branch=main)",
  "objc",
  "percent-encoding",
  "process_path",
@@ -862,6 +861,24 @@ dependencies = [
 ]
 
 [[package]]
+name = "nativeshell_build"
+version = "0.1.4"
+source = "git+https://github.com/nativeshell/nativeshell.git?branch=main#8bfab24602be2eb1bf55a094a8bd15954fa90d8f"
+dependencies = [
+ "cargo-emit",
+ "cmake",
+ "convert_case",
+ "copy_dir",
+ "dunce",
+ "path-slash",
+ "pathdiff",
+ "serde",
+ "serde_json",
+ "tar",
+ "yaml-rust",
+]
+
+[[package]]
 name = "nativeshell_examples"
 version = "0.1.0"
 dependencies = [
@@ -871,7 +888,7 @@ dependencies = [
  "env_logger",
  "gtk",
  "nativeshell",
- "nativeshell_build",
+ "nativeshell_build 0.1.4 (registry+https://github.com/rust-lang/crates.io-index)",
  "objc",
  "serde",
  "widestring",
